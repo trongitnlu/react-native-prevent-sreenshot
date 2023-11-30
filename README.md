@@ -1,6 +1,6 @@
 # react-native-prevent-screenshot
 
-This module helps get elapsed realtime in the os system.
+This module is used to prevent screen shots and detect screen shots.
 
 ## Installation
 
@@ -11,12 +11,20 @@ yarn add react-native-prevent-screenshot
 ## Usage
 
 ```js
-import { getElapsedRealtime } from 'react-native-prevent-screenshot';
+import { useScreenshotDeterrent } from 'react-native-prevent-screenshot';
 
 // ...
 
-const duration = getElapsedRealtime();
-console.warn(duration);
+const [subscribe] = useScreenshotDeterrent();
+
+React.useEffect(() => {
+  const unsubscribe = subscribe(() => {
+    console.warn('user took screen shots');
+  });
+  return () => {
+    unsubscribe();
+  };
+}, [subscribe]);
 ```
 
 ## Contributing

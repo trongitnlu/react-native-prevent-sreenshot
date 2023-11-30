@@ -75,11 +75,7 @@ export const useScreenshotDeterrent = () => {
         return () => {};
       }
 
-      const userDidScreenshot = () => {
-        warning();
-      };
-
-      const unsubscribe = addScreenshotListener(userDidScreenshot);
+      const unsubscribe = addScreenshotListener(warning);
       return () => {
         unsubscribe();
       };

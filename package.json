@@ -1,7 +1,7 @@
 {
   "name": "react-native-prevent-screenshot",
   "version": "1.0.0",
-  "description": "This module is used to prevent screen shot",
+  "description": "This module is used to prevent screen shots and detect screen shots.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
