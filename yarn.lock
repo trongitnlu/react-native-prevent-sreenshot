@@ -10830,9 +10830,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-prevent-screenshot@workspace:.":
+"rn-screenshot-detect@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-prevent-screenshot@workspace:."
+  resolution: "rn-screenshot-detect@workspace:."
   dependencies:
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-prevent-screenshot": ["./src/index"]
+      "rn-screenshot-detect": ["./src/index"]
     },
     "target": "es5",
     "module": "commonjs",

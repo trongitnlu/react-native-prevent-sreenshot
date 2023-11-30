@@ -1,17 +1,17 @@
-# react-native-prevent-screenshot
+# rn-screenshot-detect
 
 This module is used to prevent screen shots and detect screen shots.
 
 ## Installation
 
 ```sh
-yarn add react-native-prevent-screenshot
+yarn add rn-screenshot-detect
 ```
 
 ## Usage
 
 ```js
-import { useScreenshotDeterrent } from 'react-native-prevent-screenshot';
+import { useScreenshotDeterrent } from 'rn-screenshot-detect';
 
 // ...
 
