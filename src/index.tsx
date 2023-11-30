@@ -37,9 +37,12 @@ export async function allow() {
   }
 }
 
-export const useScreenshotDeterrent = (warning: () => void) => {
-  const [enabled, setEnabled] = React.useState<boolean>(false);
-
+/**
+ * Generates a hook that adds a screenshot deterrent to the application.
+ *
+ * @return {Array<Function>} A function that, when called, subscribes the provided warning function to the event that triggers when a screenshot is taken.
+ */
+export const useScreenshotDeterrent = () => {
   const screenshotDetect = NativeModules.ScreenshotDetect;
   const detectorEventEmitter = React.useMemo(
     () => new NativeEventEmitter(screenshotDetect),
@@ -66,22 +69,23 @@ export const useScreenshotDeterrent = (warning: () => void) => {
     [commonAddScreenshotListener]
   );
 
-  React.useEffect(() => {
-    if (Platform.OS === 'android') {
-      return;
-    }
-
-    const userDidScreenshot = () => {
-      if (enabled) {
-        warning();
+  const subscribe = React.useCallback(
+    (warning: () => void) => {
+      if (Platform.OS === 'android') {
+        return () => {};
       }
-    };
 
-    const unsubscribe = addScreenshotListener(userDidScreenshot);
-    return () => {
-      unsubscribe();
-    };
-  }, [addScreenshotListener, enabled, warning]);
+      const userDidScreenshot = () => {
+        warning();
+      };
 
-  return [setEnabled];
+      const unsubscribe = addScreenshotListener(userDidScreenshot);
+      return () => {
+        unsubscribe();
+      };
+    },
+    [addScreenshotListener]
+  );
+
+  return [subscribe];
 };

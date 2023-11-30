@@ -1,7 +1,7 @@
 {
   "name": "react-native-prevent-screenshot",
-  "version": "1.1.0",
-  "description": "This module help get elapsed realtime in system",
+  "version": "1.0.0",
+  "description": "This module is used to prevent screen shot",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -54,7 +54,7 @@
     "@react-native/eslint-config": "^0.72.2",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.2",
-    "@types/react": "~17.0.21",
+    "@types/react": "^18.0.24",
     "@types/react-native": "0.70.0",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",

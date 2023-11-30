@@ -10823,6 +10823,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-gradle-plugin@npm:^0.71.19":
+  version: 0.71.19
+  resolution: "react-native-gradle-plugin@npm:0.71.19"
+  checksum: 2e3ab679f0b81edd81b9fb88a73a16c8b9b6dbef4e7158fd894c42e6dff04ba8d11f1b9663ffa2c30d0d9deee3cd44b033cd280322c010be3c290e4422088a7a
+  languageName: node
+  linkType: hard
+
 "react-native-prevent-screenshot@workspace:.":
   version: 0.0.0-use.local
   resolution: "react-native-prevent-screenshot@workspace:."
@@ -10832,7 +10839,7 @@ __metadata:
     "@react-native/eslint-config": ^0.72.2
     "@release-it/conventional-changelog": ^5.0.0
     "@types/jest": ^28.1.2
-    "@types/react": ~17.0.21
+    "@types/react": ^18.0.24
     "@types/react-native": 0.70.0
     commitlint: ^17.0.2
     del-cli: ^5.0.0
@@ -10853,13 +10860,6 @@ __metadata:
     react-native: "*"
   languageName: unknown
   linkType: soft
-
-"react-native-gradle-plugin@npm:^0.71.19":
-  version: 0.71.19
-  resolution: "react-native-gradle-plugin@npm:0.71.19"
-  checksum: 2e3ab679f0b81edd81b9fb88a73a16c8b9b6dbef4e7158fd894c42e6dff04ba8d11f1b9663ffa2c30d0d9deee3cd44b033cd280322c010be3c290e4422088a7a
-  languageName: node
-  linkType: hard
 
 "react-native@npm:0.71.12":
   version: 0.71.12
