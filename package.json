@@ -1,6 +1,6 @@
 {
   "name": "rn-screenshot-detect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This module is used to prevent screen shots and detect screen shots.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
