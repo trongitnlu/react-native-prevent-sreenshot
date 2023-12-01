@@ -1,6 +1,7 @@
 # rn-screenshot-detect
 
 This module is used to prevent screen shots and detect screen shots.
+The screen shot detection will only work on iOS, as Android does not provide the underlying functionality needed to track screenshots. But on Android, we can prevent user screen shots by using the `forbid()` method.
 
 ## Installation
 
@@ -11,17 +12,19 @@ yarn add rn-screenshot-detect
 ## Usage
 
 ```js
-import { useScreenshotDeterrent } from 'rn-screenshot-detect';
+import { allow, forbid, useScreenshotDeterrent } from 'rn-screenshot-detect';
 
 // ...
 
 const [subscribe] = useScreenshotDeterrent();
 
 React.useEffect(() => {
+  forbid(); // work on android
   const unsubscribe = subscribe(() => {
     console.warn('user took screen shots');
   });
   return () => {
+    allow(); // work on android
     unsubscribe();
   };
 }, [subscribe]);

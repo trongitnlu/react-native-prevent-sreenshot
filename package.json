@@ -36,7 +36,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "rn-screenshot-detect",
+    "screenshot-detect"
   ],
   "repository": "https://github.com/trongitnlu/rn-screenshot-detect",
   "author": "Nguyễn Văn Trọng <trongitnlu@gmail.com> (https://github.com/trongitnlu)",
