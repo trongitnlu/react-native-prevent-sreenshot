@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
-    "paths": {
-      "rn-screenshot-detect": ["./src/index"]
-    },
     "target": "es5",
     "module": "commonjs",
     "strict": true,

@@ -6,7 +6,7 @@
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "files": [
-    "src",
+    "!src",
     "lib",
     "android",
     "ios",
